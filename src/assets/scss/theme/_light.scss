@@ -1,0 +1,20 @@
+// 헤더
+.middle-rank-list .middle-rank-list__title:hover {background: #fff;} 
+.left_bookmark {
+    width: 14px;
+    display: inline-block;
+    position: relative;
+    background: url(../../img/icon/bookmark_light.png) no-repeat center;
+}
+.low-rank-list > li:hover {
+    background: #fff;
+}
+
+.popup-opne li:hover {
+    background: #b9b9b9;
+}
+
+.popup-new .input-box input {
+    border-color: #6365A7;
+    background: #ededed;
+}

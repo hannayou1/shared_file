@@ -1,0 +1,187 @@
+.header__logo{
+    border-bottom: 1px solid var(--black100);
+
+    @media (max-width:800px){
+        border-bottom: 0;
+    }
+
+    a{
+        display: flex;
+        padding: 10px;
+        margin: 10px;
+
+        em{
+            width: 40px;
+            height: 40px;
+            display: block;
+            background: var(--red);
+            margin-right: 10px;
+            animation: ani 20s 1s ease-in-out infinite;
+        }
+
+        span{
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.header__menu{
+    padding: 10px 0;
+    .menu{
+        // border-bottom: 1px solid var(--black100);
+        li{
+            margin-bottom: 5px;
+            a{
+                font-size: 1rem; 
+                display:block;
+                padding: 0.9rem 2rem 0.9rem 3.125rem;
+                margin: 0 0.625rem;
+                border-radius: 40px;
+                position: relative;
+                line-height: 1;
+                color: var(--fontColor);
+                transition: all 0.3s;
+
+            
+                svg{
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    position: absolute;
+                    left: 1.25rem;
+                    top: 0.75rem;
+                }
+
+                &:hover{
+                    background: var(--black100);
+                    color: var(--white);
+                }
+            }
+
+            &.active a{
+                background: var(--black100);
+                color: var(--white); 
+            }
+        }
+    }
+    .keyword{
+        padding: 1.25rem;
+        li{
+            display: inline-block;
+            a{
+                display: inline-block;
+                padding: 5px 15px;
+                border: 1px solid var(--black200);
+                font-size: 0.8rem;
+                border-radius: 40px;
+                margin: 3px 1px;
+
+                &:hover{
+                    background: var(--black100);
+                    color: var(--white);
+                    transition: all 0.3s;
+                }
+            }
+
+            &.active a{
+                background: var(--black100);
+                color: var(--white); 
+            }
+        }
+    }
+}
+
+.header__sns{
+    position: fixed;
+    width: 260px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 15px 0 10px;
+    background: var(--blackAlpha100);
+    backdrop-filter:blur(10px);
+
+    @media (max-width:800px){
+        display: none;
+    }
+
+    li{
+        display: inline-block;
+        
+        a{
+            padding: 5px 7px;
+            display: inline-block;
+
+        }
+    }
+}
+
+@keyframes ani{
+    0% {
+        transform: rotate(0) scale(1); 
+        border-radius:0;
+    }
+    50% {
+        transform: rotate(720deg) scale(0.5);
+        border-radius:20px;
+    }
+    100% {
+        transform: rotate(0) scale(1);
+        border-radius:0;
+    }
+
+}
+
+
+
+/* side-menu */
+
+.triangle { width: 7px; height: 7px; display: inline-block; opacity: 1; transition: opacity 0.3s; margin-left: 14px; } 
+.middle-rank-list__title .triangle{margin-left: -2px !important;}
+.triangle-gray { background: url(../../img/icon/triangle-down-gray.png) no-repeat; } 
+.line_up { position: relative; top: 12px; margin-right: 5px; } 
+
+.side-menu .triangle { opacity: 1; } 
+.highest-rank-lsit__title {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding-top: 4px;
+    margin: 10px 0 0 0px;
+    
+    span{
+        padding-left: 5px;
+    }
+}
+
+.all-file { display: block; padding-left: 25px; width: 100%; height: 40px; line-height: 40px; box-sizing: border-box; margin-top: 10px}
+
+.middle-rank-list { font-size: 13px; padding: 5px 0 0 10px; overflow: hidden; } 
+
+.middle-rank-list__title { display: flex; padding: 5px 12px 5px 16px; cursor: pointer; } 
+.middle-rank-list__title > .team-photo { width: 28px; height: 28px; line-height: 28px; background: brown; margin-right: 7px; border-radius: 3px; color: #fff; font-size: 13px; text-align: center; overflow: hidden;} 
+.middle-rank-list__title > .team-name { 
+    display: flex; 
+    align-items:center; 
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block; 
+    margin : 0 1px 0 0;
+    } 
+.low-rank-list > li { padding: 8px 0 8px 62px; cursor: pointer; } 
+
+.triangle-down {
+    background: url(../../img/icon/triangle-down.png) no-repeat;
+}
+
+

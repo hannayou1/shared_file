@@ -1,0 +1,53 @@
+body {
+    background-color: var(--white500);
+    color: var(--black);
+}
+
+// 섹션 공통 요소
+section{
+    padding: 10px 24px;
+
+    h2{
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+
+        em {
+            position: relative;
+
+            &::after{
+                content: '';
+                width: 100%;
+                height: 50%;
+                background-color: var(--red100);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+// 섹션 로딩 소스
+.isLoading {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.isLoaded {
+    opacity: 1;
+    transition: opacity 0.5s;
+ }
+
+
+
+
+/* search box */
+.search_box {width: 200px; line-height: 38px; height: 100%; position: relative;}
+.search_box input {width: 100%; height: 28px; margin: 0; box-sizing: border-box; border: 1px solid #E1DFDD; border-radius: 3px; padding-right: 20px;}
+.search_box i {position: absolute; top: 53%; transform: translate(0, -50%); right: 5px; cursor: pointer;} 
+.search_box i:hover {color: #6264A7;}
+
+
+
+

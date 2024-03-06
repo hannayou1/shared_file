@@ -1,0 +1,57 @@
+:root {
+    --mainfont-nanum: "nanumSquareNeo";
+    --mainfont-nexon: "nexonLv1";
+  
+    --black: #000;
+    --black100: #161616;
+    --black200: #222;
+    --black300: #333;
+    --black400: #444;
+    --black500: #000;
+
+    --blackAlpha :#00000000;
+    --blackAlpha100 :#11111125;
+    --blackAlpha200 :#1111114d;
+    --blackAlpha300 :#11111191;
+    --blackAlpha400 :#111111c3;
+    --blackAlpha500 :#000000eb;
+
+    --white: #fff;
+    --white000: #f0f0f0;
+    --white100: #efefef;
+    --white200: #d9d9d9;
+    --white300: #fff;
+    --white400: #fff;
+    --white500: #f5f5f5;
+
+    
+
+    --red : #f00;
+    --red100 : rgba(255, 0, 0, 0.402);
+    
+    --fontColor : rgb(72, 70, 68);
+    --borderColor:rgb(225, 223, 221);
+
+    --theme-point-color : #6264A7;
+    --theme-light-color : #4545d8;
+
+    --hover-gray :rgb(235, 235, 235);
+
+    // 폰트 셋팅
+    font-family:"Noto Sans KR", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    
+
+    // 폰트 최적화
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;    //아이폰 가로모드 폰트 커지는 현상 예방
+  
+    @media (max-width: 800px) {
+        font-size: 12px !important;
+    }
+}
