@@ -4,7 +4,7 @@ import { headerMenus } from "../../data/header";
 import { tableTitle, tableContents } from "../../data/developer";
 import { FaAngleDown } from "react-icons/fa6";
 
-export const Developer = () => {
+export const Developer = ({ toggleSearchHeader }) => {
   const [loading, setLoading] = useState(true); //변수 설정 true로 설정
 
   useEffect(() => {
@@ -39,6 +39,11 @@ export const Developer = () => {
     setIsRotated04(!isRotated04);
   };
 
+  const chkboxClick = () => {
+    console.log("chkboxClick");
+    toggleSearchHeader();
+  };
+
   return (
     <section className={`${developerClass} content__section`}>
       <div className="Breadcrumb-list">
@@ -59,7 +64,7 @@ export const Developer = () => {
             <div class="thead">
               <div class="theadList-inner">
                 <div class="data-select">
-                  <div class="item">
+                  <div class="item" onClick={chkboxClick}>
                     <div class="div-check-box">
                       <input type="checkbox" name="" id="chk3" />
                       <label for="chk3" class="check-box check-box__chk">

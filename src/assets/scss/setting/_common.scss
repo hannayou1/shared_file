@@ -49,5 +49,64 @@ section{
 .search_box i:hover {color: #6264A7;}
 
 
+*:focus {
+    outline: none;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+    overflow: hidden;
+}
+body {
+    margin: 0; 
+    font-family: 'Noto Sans KR', sans-serif; 
+    max-width: 2000px; 
+    min-width: 300px;
+    line-height: 1;
+    font-size: 13px;
+}
+a, a:link, a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input {
+    border: 1px solid;
+}
+input:focus {
+    outline: none;
+}
+
+/* 스크롤 바 디자인 */
+
+::-webkit-scrollbar { width: 7.2px; } /* 스크롤 바 */
+::-webkit-scrollbar-track { background: transparent;  } /* 스크롤 바 밑의 배경 */
+::-webkit-scrollbar-thumb { background-color:#919191; border-radius: 3px;} /* 실질적 스크롤 바 */
+::-webkit-scrollbar-thumb:hover { background: #dddddd; } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+::-webkit-scrollbar-thumb:active { background: #919191; } /* 실질적 스크롤 바를 클릭할 때 */
+::-webkit-scrollbar-button { display: none; } /* 스크롤 바 상 하단 버튼 */
+
+/* 모바일 패치 (아이패드 글자 확대 방지) */
+html{-webkit-text-size-adjust:none;}
+
 
 

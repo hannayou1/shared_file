@@ -7,6 +7,7 @@ import { Search } from "./Search";
 import ScrollTo from "../../utils/scrollTo";
 import Filter from "../contents/Filter";
 import NewFolderPop from "../contents/NewFolderPop";
+import Developer from "../contents/Developer";
 
 export const Main = (props) => {
   // 필터
@@ -39,25 +40,31 @@ export const Main = (props) => {
     setIsHeaderVisible(!isHeaderVisible);
   };
 
+  const [isSearchHeaderVisible, setIsSearchHeaderVisible] = useState(true);
+  const toggleSearchHeader = () => {
+    setIsSearchHeaderVisible(!isSearchHeaderVisible);
+  };
+
   return (
     <HelmetProvider>
       <ScrollTo />
       <Helmet titleTemplate="%s" defer={false}>
         {props.title && <title>{props.title}</title>}
-        {/* <meta name="description" content={props.description} /> */}
       </Helmet>
-
-      {/* {isHeaderVisible && <Header />} */}
       <Header isActive={isHeaderVisible} toggleHeader={toggleHeader} />
       <main
         id="main"
         role="main"
         className={isHeaderVisible ? "menu-open" : "menu-closed"}
       >
-        <Search toggleHeader={toggleHeader} toggleFilter={toggleFilter} />
+        <Search
+          toggleHeader={toggleHeader}
+          toggleFilter={toggleFilter}
+          isSearchHeaderVisible={isSearchHeaderVisible}
+        />
         <Filter isVisible={isFilterVisible} />
         <NewFolderPop />
-        {props.children}
+        <Developer id="developer" toggleSearchHeader={toggleSearchHeader} />
       </main>
     </HelmetProvider>
   );

@@ -16,64 +16,144 @@ export const Menu = () => {
   const [isLowRankListVisible, setIsLowRankListVisible] = useState(true);
 
   const handleLowRankListClick = (e) => {
-    e.stopPropagation(); // Stop propagation to prevent toggling the middle-rank-list when clicking on low-rank-list items
+    e.stopPropagation();
     setIsLowRankListVisible((prevState) => !prevState);
+  };
+
+  const [isLowRankListVisible02, setIsLowRankListVisible02] = useState(true);
+
+  const handleLowRankListClick02 = (e) => {
+    e.stopPropagation();
+    setIsLowRankListVisible02((prevState) => !prevState);
   };
 
   const middleRankListStyle = {
     maxHeight: isMiddleRankListVisible ? "500px" : "0",
     overflow: "hidden",
-    transition: "max-height 0.2s ease-in-out", // Adjust speed here
+    //transition: "max-height 0.2s ease-in-out",
   };
 
-  const LowRankListStyle = {
-    maxHeight: isLowRankListVisible ? "500px" : "0",
-    overflow: "hidden",
-    transition: "max-height 0.3s ease-in-out", // Adjust speed here
+  const stopPropagation = (e) => {
+    e.stopPropagation();
   };
 
+  const [isBookmarkOn, setIsBookmarkOn] = useState(false);
+
+  const handleClick = (e) => {
+    e.stopPropagation();
+    setIsBookmarkOn(!isBookmarkOn);
+  };
+
+  const [isBookmarkOn02, setIsBookmarkOn02] = useState(false);
+
+  const handleClick02 = (e) => {
+    e.stopPropagation();
+    setIsBookmarkOn02(!isBookmarkOn02);
+  };
   return (
     <>
       <nav className="header__menu">
         <ul className="highest-rank-lsit">
           <li>
-            <div className="highest-rank-lsit__title">
-              <div className="triangle triangle-gray"></div>
-              <span onClick={handleTitleClick}>내 팀즈 그룹</span>
-              {headerMenus.map((menu, key) => (
-                <ul
-                  className="middle-rank-list"
-                  key={key}
-                  style={middleRankListStyle}
-                >
-                  <li
-                    className={location.pathname === menu.src ? "actvie" : ""}
+            <div
+              className="highest-rank-lsit__title"
+              onClick={handleTitleClick}
+            >
+              <div
+                className="triangle triangle-gray"
+                style={{
+                  transform: isMiddleRankListVisible
+                    ? "none"
+                    : "rotate(270deg)",
+                }}
+              ></div>
+              <span>내 팀즈 그룹</span>
+
+              <ul className="middle-rank-list" style={middleRankListStyle}>
+                <li className="">
+                  <div
+                    className="middle-rank-list__title"
+                    onClick={handleLowRankListClick}
                   >
                     <div
-                      className="middle-rank-list__title"
-                      onClick={handleLowRankListClick}
-                    >
-                      <div className="triangle triangle-down line_up"></div>
-                      <div className="team-photo">{menu.title}</div>
-                      <div className="team-name">{menu.title}</div>
-                      <div className="left_bookmark"></div>
-                    </div>
-
-                    <ul
-                      className="low-rank-list"
+                      className="triangle triangle-down line_up"
                       style={{
-                        display: isLowRankListVisible ? "block" : "none",
+                        transform: isLowRankListVisible
+                          ? "rotate(270deg)"
+                          : "none",
                       }}
-                    >
-                      {menu.submenu.map((subMenu, subKey) => (
-                        <li key={subKey}>
-                          <Link>{subMenu}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                </ul>
-              ))}
+                    ></div>
+                    <div className="team-photo">{headerMenus[0].title}</div>
+                    <div className="team-name">{headerMenus[0].title}</div>
+                    <div
+                      className={
+                        isBookmarkOn ? "left_bookmark active" : "left_bookmark"
+                      }
+                      onClick={handleClick}
+                    ></div>
+                  </div>
+
+                  <ul
+                    className="low-rank-list"
+                    style={{
+                      display: isLowRankListVisible ? "block" : "none",
+                    }}
+                  >
+                    <li onClick={stopPropagation}>
+                      <Link>{headerMenus[0].submenu[0]}</Link>
+                    </li>
+                    <li onClick={stopPropagation}>
+                      <Link>{headerMenus[0].submenu[1]}</Link>
+                    </li>
+                    <li onClick={stopPropagation}>
+                      <Link>{headerMenus[0].submenu[2]}</Link>
+                    </li>
+                  </ul>
+                </li>
+
+                <li className="">
+                  <div
+                    className="middle-rank-list__title"
+                    onClick={handleLowRankListClick02}
+                  >
+                    <div
+                      className="triangle triangle-down line_up"
+                      style={{
+                        transform: isLowRankListVisible02
+                          ? "rotate(270deg)"
+                          : "none",
+                      }}
+                    ></div>
+                    <div className="team-photo">{headerMenus[1].title}</div>
+                    <div className="team-name">{headerMenus[1].title}</div>
+                    <div
+                      className={
+                        isBookmarkOn02
+                          ? "left_bookmark active"
+                          : "left_bookmark"
+                      }
+                      onClick={handleClick02}
+                    ></div>
+                  </div>
+
+                  <ul
+                    className="low-rank-list"
+                    style={{
+                      display: isLowRankListVisible02 ? "block" : "none",
+                    }}
+                  >
+                    <li onClick={stopPropagation}>
+                      <Link>{headerMenus[1].submenu[0]}</Link>
+                    </li>
+                    <li onClick={stopPropagation}>
+                      <Link>{headerMenus[1].submenu[1]}</Link>
+                    </li>
+                    <li onClick={stopPropagation}>
+                      <Link>{headerMenus[1].submenu[2]}</Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </li>
         </ul>

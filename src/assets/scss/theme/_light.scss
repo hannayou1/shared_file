@@ -6,15 +6,45 @@
     position: relative;
     background: url(../../img/icon/bookmark_light.png) no-repeat center;
 }
+
+.left_bookmark.active {
+    background: url('../../img/icon/bookmark_on.png') no-repeat center;
+    /* active 클래스가 적용되면 다른 배경 이미지로 변경 */
+  }
+
 .low-rank-list > li:hover {
     background: #fff;
 }
 
 .popup-opne li:hover {
-    background: #b9b9b9;
+    background: var(--white100);
 }
 
-.popup-new .input-box input {
-    border-color: #6365A7;
+.input-box input {
+    border-color: #6365A7 !important;
     background: #ededed;
+}
+
+.set-nomal.btn-default-change {
+    border-top: 1px solid rgb(235, 235, 235);
+}
+
+.main label .chk-box::before {
+    background-color: #6264a7;
+}
+
+.btn-white {
+    border: 1px solid #888;
+    box-sizing: border-box;
+}
+
+.btn-white:hover{background-color: var(--white100);}
+.btn-basic:hover{background-color:var(--theme-hover-color) ; color: var(--white);}
+
+.ts-modal-dialog-header, .files-navigation li, .files-navigation, .ts-files-table-container thead, .ts-modal-dialog-footer, .sharepoint-files-list .header.under-line {
+    border-color: #ddd !important;
+}
+
+.clamp {
+    background: url(../../img/icon/clamp.png) no-repeat center;
 }

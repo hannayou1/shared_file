@@ -617,6 +617,20 @@ li.color.Calendar_Yellow::before {background-color: #FFCB3C;}
 .m_text{font-weight: 500; margin-left: 2px; white-space: nowrap;}
 .m_img_normal{ font-size: 13px; margin: 0 2px 0 0; line-height: 14px;}
 
+.pop_icon{
+   width: 20px;
+   height: 20px;
+   vertical-align: text-top;
+   margin-right: 5px;
+}
+
+.pop_icon.small{
+   width: 15px;
+   height: 15px;
+}
+
+
+
 /* .gray_icon{color: var(--);} */
 /* 그래프 */
 .z-line-graph{position: absolute; height: 42px; background:#DCE0FA; border: 1px solid #5b5fc7; border-radius: 2px; box-sizing: border-box; overflow: hidden;}
@@ -729,3 +743,8 @@ li.color.Calendar_Yellow::before {background-color: #FFCB3C;}
 .none_click{
    cursor: default !important;
 }
+
+input:focus {
+   outline: none;
+}
+

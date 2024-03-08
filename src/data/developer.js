@@ -4,14 +4,6 @@ import file_ppt from '../assets/img/icon/pptx.svg'
 import file_excel from '../assets/img/icon/xlsx.svg'
 
 
-export const developerText = [
-    {
-        name : "이름",
-        
-    
-    }
-  
-]
 
 export const tableTitle ={
         img : fileImg,

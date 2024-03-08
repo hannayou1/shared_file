@@ -16,7 +16,7 @@ export const headerMenus = [
     {
         title: "삼성전자 DS 일정동기화 일정동기화 ",
         icon: <CiBaseball />,
-        submenu:["일반", "공지사항", "문서 관리"]
+        submenu:["일반1", "공지사항1", "문서 관리1"]
     },
     {
         title: "한독 하모니",
