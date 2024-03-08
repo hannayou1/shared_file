@@ -193,17 +193,10 @@
         display: none;
     }
 
-    .table-file-list .data-select .item:nth-child(1) {
-        display: none;
-    }
 
-    .table-file-list .text-img {
-        width: 35px;
-        height: 35px;
-    }
 
     .data-select {
-        width: 45px;
+        width: 60px;
     }
 
     .data-body {
@@ -233,6 +226,7 @@
     .data-detail {
         font-size: 11px;
         opacity: 0.5;
+        height: auto;
     }
 
     .data-title {
