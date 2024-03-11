@@ -375,7 +375,7 @@
 
 // * table */
 
-.file-table { font-size: 13px; overflow-y: auto;} 
+.file-table { font-size: 13px; overflow-y: auto; overflow-x: hidden;} 
 
 .table-file-list { width: 100%; min-width: 350px; } 
 
